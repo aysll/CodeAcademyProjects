@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.main{
+
+    background: red;
+    border:1px solid green;
+
+}
+.child{
+	
+	height: 100px;
+	background: green;
+    display: inline-block;
+	margin: 5px;
+}
+</style>
+
+</head>
+<body>
+<script type="text/javascript">
+	var myDiv=document.createElement("div");
+	myDiv.setAttribute("class", "main");
+	document.body.appendChild(myDiv);
+
+
+var create=function(width,column,number){
+	for(i=0; i<number; i++){
+		myDiv.style.width=width+"px";
+		var mySecondDiv=document.createElement("div");
+		mySecondDiv.setAttribute("class", "child");
+		mySecondDiv.style.width=(width/column-10) +"px";
+		
+		
+		myDiv.appendChild(mySecondDiv);
+}
+	}
+		create(300,4,20);
+</script>
+</body>
+</html>
