@@ -5,7 +5,6 @@
 .main{
 
     background: red;
-    border:1px solid green;
 
 }
 .child{
@@ -31,6 +30,7 @@ var create=function(width,column,number){
 		var mySecondDiv=document.createElement("div");
 		mySecondDiv.setAttribute("class", "child");
 		mySecondDiv.style.width=(width/column-10) +"px";
+		mySecondDiv.style.marginBottom=0 +"px"
 		
 		
 		myDiv.appendChild(mySecondDiv);
